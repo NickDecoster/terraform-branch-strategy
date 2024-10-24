@@ -25,13 +25,13 @@ module "aks" {
 }
 
 module "postgres" {
-  source = "./modules/postgres"
-  env_prefix = var.env_prefix
-  location = local.location
+  source                  = "./modules/postgres"
+  env_prefix              = var.env_prefix
+  location                = local.location
   postgres_admin_password = var.postgres_admin_password
-  prefix = var.prefix
-  resource_group_name = data.azurerm_resource_group.rg-tfworkshops.name
-  virtual_network_name = azurerm_virtual_network.vn.name
+  prefix                  = var.prefix
+  resource_group_name     = data.azurerm_resource_group.rg-tfworkshops.name
+  virtual_network_name    = azurerm_virtual_network.vn.name
 
   depends_on = [azurerm_virtual_network.vn]
 }
