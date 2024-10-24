@@ -35,3 +35,8 @@ module "postgres" {
 
   depends_on = [azurerm_virtual_network.vn]
 }
+
+module "datahub" {
+  source = "./modules/datahub"
+  env_prefix = var.env_prefix
+}
