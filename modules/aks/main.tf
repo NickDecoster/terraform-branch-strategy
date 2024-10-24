@@ -1,3 +1,7 @@
+locals {
+  location = "germany"
+}
+
 data "azurerm_resource_group" "rg-tfworkshops" {
   name = var.resource_group_name
 }
@@ -17,7 +21,7 @@ resource "azurerm_subnet" "nodepool-sn" {
 resource "azurerm_kubernetes_cluster" "aks" {
   name                = "${var.prefix}-${var.env_prefix}-aks"
   dns_prefix          = "${var.prefix}-${var.env_prefix}"
-  location            = data.azurerm_resource_group.rg-tfworkshops.location
+  location            = local.location
   resource_group_name = data.azurerm_resource_group.rg-tfworkshops.name
 
   default_node_pool {
