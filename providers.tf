@@ -5,7 +5,7 @@ provider "azurerm" {
 
 provider "helm" {
   kubernetes {
-    host     = module.aks.host
+    host = module.aks.host
 
     client_certificate     = base64decode(module.aks.client_certificate)
     client_key             = base64decode(module.aks.client_key)
@@ -14,7 +14,7 @@ provider "helm" {
 }
 
 provider "kubernetes" {
-  host     = module.aks.host
+  host = module.aks.host
 
   client_certificate     = base64decode(module.aks.client_certificate)
   client_key             = base64decode(module.aks.client_key)
