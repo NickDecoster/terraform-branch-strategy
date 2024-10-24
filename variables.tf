@@ -38,16 +38,6 @@ variable "neo4j_username" {
   default = "datahub"
 }
 
-variable "postgres_user" {
-  type    = string
-  default = "psqladmin"
-}
-
-variable "postgres_password" {
-  type      = string
-  sensitive = true
-}
-
 variable "postgres_db_name" {
   type    = string
   default = "datahub"
