@@ -19,6 +19,7 @@ module "aks" {
   prefix               = var.prefix
   resource_group_name  = data.azurerm_resource_group.rg-tfworkshops.name
   virtual_network_name = azurerm_virtual_network.vn.name
+  location             = local.location
 
   depends_on = [azurerm_virtual_network.vn]
 }
