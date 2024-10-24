@@ -5,3 +5,8 @@ variable "env_prefix" {
 variable "prefix" {
   type = string
 }
+
+variable "postgres_admin_password" {
+  type      = string
+  sensitive = true
+}
