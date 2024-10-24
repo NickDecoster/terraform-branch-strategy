@@ -27,7 +27,7 @@ env:
   TF_VAR_prefix: ${{ vars.PREFIX }} 
   TF_VAR_postgres_admin_password: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
   TF_VAR_neo4j_password: ${{ secrets.NEO4J_PASSWORD }}
-  TF_VAR_datahub_root_user_password: ${{ DATAHUB_ROOT_USER_PASSWORD }}
+  TF_VAR_datahub_root_user_password: ${{ secrets.DATAHUB_ROOT_USER_PASSWORD }}
 
 jobs:
   terraform-plan:
