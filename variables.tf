@@ -8,4 +8,5 @@ variable "prefix" {
 
 variable "postgres_admin_password" {
   type = string
+  sensitive = true
 }
