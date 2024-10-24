@@ -1,5 +1,5 @@
 locals {
-  location = "francecentral"
+  location = "polandcentral"
 }
 
 data "azurerm_resource_group" "rg-tfworkshops" {
